@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Final Project</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <h1>Book</h1>
+  <p style="text-align:center; margin-top: 40px; color: #ccc;">
+    “A room without books is like a body without a soul.” — Marcus Tullius Cicero
+  </p>
+  <br>
+  <input type="text" id="searchInput" placeholder="Search for a book">
+  <button onclick="searchBooks()">Search</button>
+  <div id="loading" style="display:none; text-align:center; margin-top:20px;">Loading...</div>
+  <div id="results"></div>
+  <button onclick="scrollToTop()" id="scrollToTopBtn" style="display:none;">↑</button>
+
+
+  </div>
+
+  <!-- Google Sign-In -->
+   <div class="google-signin-wrapper">
+  <div id="g_id_onload"
+    data-client_id="238581022346-csskt2k4rf0g9tuh93rc0uuk2iurnm7s.apps.googleusercontent.com"
+    data-callback="handleCredentialResponse"
+    data-auto_prompt="false">
+  </div>
+  <div class="g_id_signin" data-type="standard"></div>
+   </div>
+  <script src="script.js"></script>
+</body>
+</html>
