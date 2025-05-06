@@ -22,7 +22,7 @@ function searchBooks() {
   loading.style.display = 'block';
   resultsDiv.innerHTML = '';
 
-  fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=20&key=${API_KEY}`)
+  fetch(`https://www.googleapis.com/books/v1/volumes?q=${query}&key=${API_KEY}`)
     .then(response => response.json())
     .then(data => {
       loading.style.display = 'none';
@@ -32,7 +32,7 @@ function searchBooks() {
         return;
       }
 
-      data.items.slice(0, 20).forEach(item => {
+      data.items.slice(0, 10).forEach(item => {
         const book = item.volumeInfo;
         const description = book.description
           ? book.description.substring(0, 100) + '...'
